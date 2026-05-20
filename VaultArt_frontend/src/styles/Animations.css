@@ -1,0 +1,36 @@
+
+.animated-left, .animated-right {
+    opacity: 0;
+}
+
+.animated-left.visible {
+    opacity: 1;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.animated-right.visible {
+    opacity: 1;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

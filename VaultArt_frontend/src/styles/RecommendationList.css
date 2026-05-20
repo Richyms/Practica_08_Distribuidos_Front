@@ -1,0 +1,121 @@
+.recommendation-wrapper {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.recommendation-header {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000000;/*white:#ffffff*/
+}
+
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.rec-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.rec-item-link:last-child {
+    border-bottom: none;
+}
+
+.rec-item-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.rec-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 20px;
+}
+
+.rec-thumbnail-wrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #2a2a36;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rec-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rec-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rec-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.rec-meta, .rec-category {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #a0a0b5;
+}
+
+.rec-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rec-stars {
+    color: #5d5d7e;
+    display: flex;
+    gap: 4px;
+    font-size: 1rem;
+}
+
+.rec-heart-btn {
+    background: none;
+    border: none;
+    color: #a0a0b5;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.rec-heart-btn:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .rec-item {
+        gap: 12px;
+    }
+    .rec-thumbnail-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    .rec-title {
+        font-size: 1rem;
+    }
+    .rec-stars {
+        display: none;
+    }
+}

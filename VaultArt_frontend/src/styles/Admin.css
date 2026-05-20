@@ -1,0 +1,305 @@
+/* Layout Principal */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    background-color: #0f111a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= BARRA LATERAL ================= */
+.admin-sidebar {
+    width: 260px;
+    background-color: #1a1d2d;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2a2d3d;
+}
+
+.sidebar-brand h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.sidebar-brand span {
+    color: #8a6ab3;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-label {
+    color: #6c7293;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 15px 0 5px 10px;
+    letter-spacing: 1px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: none;
+    border: none;
+    color: #a0a5ba;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: left;
+}
+
+.nav-btn:hover {
+    background-color: #24283b;
+    color: #fff;
+}
+
+.nav-btn.active {
+    background-color: #6a4b93;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(106, 75, 147, 0.4);
+}
+
+.link-btn {
+    border: 1px dashed #3a3f58;
+}
+
+/* ================= CONTENIDO PRINCIPAL ================= */
+.admin-content {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #6a4b93;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* --- TARJETAS DASHBOARD --- */
+.dashboard-cards {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.dash-card {
+    flex: 1;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.gradient-purple {
+    background: linear-gradient(135deg, #6a4b93, #a25296);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+
+.card-info h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+}
+
+.card-action {
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.card-action:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.card-icon {
+    font-size: 5rem;
+    color: rgba(255,255,255,0.2);
+}
+
+/* --- MINI PANELES DIVIDIDOS --- */
+.dashboard-split {
+    display: flex;
+    gap: 25px;
+}
+
+.mini-panel {
+    flex: 1;
+    background-color: #1a1d2d;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2a2d3d;
+    padding-bottom: 15px;
+}
+
+.text-btn {
+    background: none;
+    border: none;
+    color: #6a4b93;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.item-info strong {
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.item-info span {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.icon-action {
+    background-color: #24283b;
+    border: none;
+    color: #a0a5ba;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-action:hover {
+    background-color: #6a4b93;
+    color: white;
+}
+
+/* --- TABLAS COMPLETAS --- */
+.full-panel {
+    background-color: #1a1d2d;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.full-panel h2 {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 15px;
+    color: #6c7293;
+    border-bottom: 2px solid #2a2d3d;
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #2a2d3d;
+    vertical-align: middle;
+}
+
+.role-badge {
+    background-color: rgba(106, 75, 147, 0.2);
+    color: #b986f2;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background-color: rgba(0, 200, 83, 0.15);
+    color: #00e676;
+}
+
+.status-badge.inactive {
+    background-color: rgba(255, 61, 0, 0.15);
+    color: #ff3d00;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.action-btn:hover { opacity: 0.8; }
+.action-btn.edit { background-color: #2b5876; }
+.action-btn.warn { background-color: #ff9100; }
+.action-btn.delete { background-color: #ff1744; }

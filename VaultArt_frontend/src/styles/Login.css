@@ -1,0 +1,237 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin-bottom: 50px;
+}
+
+.login-form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.login-form-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.login-subtitle {
+    color: #666666;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.login-input:focus {
+    border-color: #674FA3;
+    box-shadow: 0 0 0 3px rgba(103, 79, 163, 0.1);
+}
+
+.input-group:focus-within .input-icon {
+    color: #674FA3;
+}
+
+.login-input::placeholder {
+    color: #999999;
+}
+
+.forgot-password {
+    text-align: center;
+}
+
+.forgot-link {
+    color: #674FA3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #4f3b7c;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #674FA3;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #4f3b7c;
+}
+
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(103, 79, 163, 0.3);
+}
+
+.welcome-column{
+    flex: 1;
+    background: linear-gradient(135deg, #674FA3 0%, #4f3b7c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 100% 0 0 100%;
+}
+
+.welcome-wrapper {
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.welcome-text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.login-error-message {
+    background-color: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border-left: 4px solid #ff4444;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background: white;
+    color: #674FA3;
+}
+
+/* =========================================
+   Responsividad (Móviles y Tablets)
+   ========================================= */
+
+@media (max-width: 850px) {
+    .login-container {
+        flex-direction: column; 
+        height: auto;
+        min-height: calc(100vh - 60px); 
+        margin-bottom: 0;
+    }
+
+    .login-form-column {
+        padding: 3rem 2rem;
+        flex: none;
+    }
+
+    .welcome-column {
+        padding: 4rem 2rem;
+        border-radius: 40px 40px 0 0; 
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .login-title {
+        font-size: 2.8rem;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-column {
+        padding: 2rem 1.5rem;
+    }
+
+    .welcome-column {
+        padding: 3rem 1.5rem;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .login-title {
+        font-size: 2.2rem;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+    }
+}

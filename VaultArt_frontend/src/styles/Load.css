@@ -1,0 +1,78 @@
+.load-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Transición suave de color */
+}
+
+.load-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.load-gif {
+    max-width: 250px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.load-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.load-text {
+    font-size: 1.1rem;
+    max-width: 400px;
+    animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* =======================================
+   TEMA CLARO (Para Perfil, Home, Content)
+   ======================================= */
+.load-claro {
+    background-color: #ffffff;
+}
+
+.load-claro .load-title {
+    color: #333333;
+}
+
+.load-claro .load-text {
+    color: #666666;
+}
+
+.load-claro .load-gif {
+    box-shadow: 0 0 30px rgba(106, 75, 147, 0.08); /* Sombra morada muy sutil */
+}
+
+/* =======================================
+   TEMA OSCURO (Para el Reproductor Film)
+   ======================================= */
+.load-oscuro {
+    background-color: #121212;
+}
+
+.load-oscuro .load-title {
+    color: #ffffff;
+}
+
+.load-oscuro .load-text {
+    color: #a0a0b5;
+}
+
+.load-oscuro .load-gif {
+    box-shadow: 0 0 30px rgba(106, 75, 147, 0.2); /* Sombra morada más fuerte para fondo negro */
+}

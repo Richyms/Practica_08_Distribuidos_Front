@@ -1,0 +1,222 @@
+.reg-register-container {
+    min-height: 100vh;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin-bottom: 50px;
+}
+
+.reg-register-form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.reg-register-form-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.reg-register-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.reg-register-subtitle {
+    color: #666666;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.reg-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reg-input-group {
+    width: 100%;
+    position: relative;
+}
+
+.reg-input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.reg-register-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.reg-register-input:focus {
+    border-color: #674FA3;
+    box-shadow: 0 0 0 3px rgba(103, 79, 163, 0.1);
+}
+
+.reg-register-group:focus-within .input-icon {
+    color: #674FA3;
+}
+
+.reg-register-input::placeholder {
+    color: #999999;
+}
+
+.reg-register-button {
+    width: 100%;
+    background-color: #674FA3;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.reg-register-button:hover {
+    background-color: #4f3b7c;
+}
+
+.reg-register-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(103, 79, 163, 0.3);
+}
+
+.reg-login-column{
+    flex: 1;
+    background: linear-gradient(135deg, #674FA3 0%, #4f3b7c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 0 100% 100% 0;
+}
+
+.reg-login-wrapper {
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.reg-login-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.reg-login-text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.reg-login-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reg-login-button:hover {
+    background: white;
+    color: #674FA3;
+}
+
+.reg-error-container {
+    position: absolute;
+    bottom: -30px; 
+    left: 0;
+    width: 100%;
+    height: 25px;
+}
+
+.reg-error-text {
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* =========================================
+   Responsividad (Móviles y Tablets)
+   ========================================= */
+
+@media (max-width: 850px) {
+    .reg-register-container {
+        flex-direction: column-reverse; 
+        height: auto;
+        min-height: calc(100vh - 60px);
+        margin-bottom: 0;
+    }
+
+    .reg-register-form-column {
+        padding: 3rem 2rem;
+        flex: none;
+    }
+
+    .reg-login-column {
+        padding: 4rem 2rem;
+        border-radius: 40px 40px 0 0; 
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .reg-register-title {
+        font-size: 2.8rem;
+    }
+
+    .reg-login-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reg-register-form-column {
+        padding: 2rem 1.5rem;
+    }
+
+    .reg-login-column {
+        padding: 3rem 1.5rem;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .reg-register-title {
+        font-size: 2.2rem;
+    }
+
+    .reg-login-text {
+        font-size: 1rem;
+    }
+}

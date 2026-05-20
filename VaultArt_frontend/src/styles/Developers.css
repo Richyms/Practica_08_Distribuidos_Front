@@ -1,0 +1,120 @@
+.developers-section {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    clear: both;/
+}
+
+.developers-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.developers-subtitle {
+    color: #666666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.developers-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.developer-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(103, 79, 163, 0.15);
+}
+
+.developer-photo-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #674FA3;
+    padding: 3px;
+}
+
+.secret-trigger {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.developer-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.developer-photo-wrapper:hover .developer-photo {
+    transform: scale(1.05);
+}
+
+.developer-info {
+    text-align: center;
+}
+
+.developer-name {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin: 0 0 5px 0;
+}
+
+.developer-role {
+    display: inline-block;
+    color: #674FA3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.developer-desc {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .developers-container {
+        gap: 25px;
+    }
+    
+    .developer-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
