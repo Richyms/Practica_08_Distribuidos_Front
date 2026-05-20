@@ -1,6 +1,7 @@
 # Practica_08_Distribuidos_Front
 Copia del proyecto Vault Art en versión preliminar
-Configurar dentro de la carpeta
+
+Realizar configuraciones dentro de la Carpeta VultArt_Front
 # Vault Art - Frontend
 Frontend para un servicio de streaming seguro (Vault Art)
 
