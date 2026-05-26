@@ -7,7 +7,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color: #000000;/*white:#ffffff*/
+    color: #000000;
 }
 
 .recommendation-list {
@@ -108,14 +108,25 @@
     .rec-item {
         gap: 12px;
     }
+    
     .rec-thumbnail-wrapper {
         width: 60px;
         height: 60px;
     }
+    
     .rec-title {
         font-size: 1rem;
     }
+
+    .rec-actions {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .rec-stars {
-        display: none;
+        display: flex;
+        font-size: 0.85rem;
+        gap: 2px;
     }
 }
